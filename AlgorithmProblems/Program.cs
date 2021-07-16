@@ -42,6 +42,11 @@ namespace AlgorithmProblems
                     bubbleSort.Sort(array);
                     bubbleSort.PrintArray(array);
                     break;
+                case 5:
+                    int[] arr1 = { 4, 9, 3, 1, 8 };
+                    MergeSort.Sort(arr1, 0, arr1.Length - 1);
+                    MergeSort.PrintArray(arr1);
+                    break;
                 default:
                     break;
             }
