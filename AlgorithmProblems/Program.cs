@@ -14,6 +14,8 @@ namespace AlgorithmProblems
             Console.WriteLine("2.Binary search word");
             Console.WriteLine("3.Insertion sort");
             Console.WriteLine("4.Bubble sort");
+            Console.WriteLine("5.Merge sort");
+            Console.WriteLine("6.Anagram");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -46,6 +48,10 @@ namespace AlgorithmProblems
                     int[] arr1 = { 4, 9, 3, 1, 8 };
                     MergeSort.Sort(arr1, 0, arr1.Length - 1);
                     MergeSort.PrintArray(arr1);
+                    break;
+                case 6:
+                    Anagram anagram = new Anagram();
+                    anagram.CheckAnagram();
                     break;
                 default:
                     break;
