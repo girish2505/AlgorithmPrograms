@@ -19,6 +19,7 @@ namespace AlgorithmProblems
             Console.WriteLine("7.Prime Number");
             Console.WriteLine("8.Anagaram and palindrome Prime Number");
             Console.WriteLine("9.Guess the number");
+            Console.WriteLine("10.Coustom message");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -68,6 +69,10 @@ namespace AlgorithmProblems
                 case 9:
                     GuessTheNumber guessTheNumber = new GuessTheNumber();
                     guessTheNumber.Number();
+                    break;
+                case 10:
+                    RegEx regEx = new RegEx();
+                    regEx.Message();
                     break;
                 default:
                     break;
