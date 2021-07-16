@@ -20,16 +20,16 @@ namespace AlgorithmProblems
             Array.Sort(char1);
             Array.Sort(char2);
  
-            string NewWord1 = new string(char1);
-            string NewWord2 = new string(char2);
+            string w1 = new string(char1);
+            string w2 = new string(char2);
 
-            if (NewWord1 == NewWord2)
+            if (w1 == w2)
             {
-                Console.WriteLine("Yes! Words \"{0}\" and \"{1}\" are Anagrams", word1, word2);
+                Console.WriteLine("Yes! Both the strings are anagram");
             }
             else
             {
-                Console.WriteLine("No! Words \"{0}\" and \"{1}\" are not Anagrams", word1, word2);
+                Console.WriteLine("No! Both the strings are not anagram");
             }
         }
     }
