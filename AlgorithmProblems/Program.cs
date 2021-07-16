@@ -1,4 +1,7 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections;
+using System.IO;
 
 namespace AlgorithmProblems
 {
@@ -8,6 +11,7 @@ namespace AlgorithmProblems
         {
             Console.WriteLine("***Algorithm Problems***");
             Console.WriteLine("1.Permutation of string");
+            Console.WriteLine("2.Binary search word");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -17,6 +21,12 @@ namespace AlgorithmProblems
                     string str = Console.ReadLine();
                     int length = str.Length;
                     Permutation.permute(str, 0, length - 1);
+                    break;
+                case 2:
+                    string filepath = File.ReadAllText(@"C:\Users\giris\source\repos\AlgorithmProblems\AlgorithmProblems\WordList.txt");
+                    List<string> list = new List<string>(filepath.Split(' '));
+                    list.Sort();
+                    BinarySearchWord.BinarySearch(list);
                     break;
                 default:
                     break;
