@@ -17,6 +17,7 @@ namespace AlgorithmProblems
             Console.WriteLine("5.Merge sort");
             Console.WriteLine("6.Anagram");
             Console.WriteLine("7.Prime Number");
+            Console.WriteLine("8.Anagaram and palindrome Prime Number");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -57,6 +58,10 @@ namespace AlgorithmProblems
                 case 7:
                     PrimeNumber prime = new PrimeNumber();
                     prime.FindPrime();
+                    break;
+                case 8:
+                    PalindromePrime palindromePrime = new PalindromePrime();
+                    palindromePrime.ReadInput();
                     break;
                 default:
                     break;
