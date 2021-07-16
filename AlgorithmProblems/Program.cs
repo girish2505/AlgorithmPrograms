@@ -12,7 +12,8 @@ namespace AlgorithmProblems
             Console.WriteLine("***Algorithm Problems***");
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search word");
-            Console.WriteLine("3.insertion sort");
+            Console.WriteLine("3.Insertion sort");
+            Console.WriteLine("4.Bubble sort");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -34,6 +35,12 @@ namespace AlgorithmProblems
                     string[] arr = { "My", "Name", "Is", "Girish" };
                     insertionSort.Sort(arr);
                     insertionSort.PrintArray(arr);
+                    break;
+                case 4:
+                    BubbleSort bubbleSort = new BubbleSort();
+                    int[] array = { 4,9,3,1,8 };
+                    bubbleSort.Sort(array);
+                    bubbleSort.PrintArray(array);
                     break;
                 default:
                     break;
