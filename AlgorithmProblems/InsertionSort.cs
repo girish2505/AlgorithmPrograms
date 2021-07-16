@@ -16,13 +16,15 @@ namespace AlgorithmProblems
             }
             Console.Write("\n");
         }
+        // Function to sort array
         public void Sort(string[] arr)
         {
-            int size = arr.Length;
-            for (int i = 1; i < size; i++)
+            int n = arr.Length;
+            for (int i = 1; i < n; i++)
             {
                 string max = arr[i];
                 int j = i - 1;
+                //searching for minmum element in the array and move to the first position
                 while (j >= 0 && arr[j].Length > max.Length)
                 {
                     arr[j + 1] = arr[j];

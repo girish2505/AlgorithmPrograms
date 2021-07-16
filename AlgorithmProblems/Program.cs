@@ -12,6 +12,7 @@ namespace AlgorithmProblems
             Console.WriteLine("***Algorithm Problems***");
             Console.WriteLine("1.Permutation of string");
             Console.WriteLine("2.Binary search word");
+            Console.WriteLine("3.insertion sort");
             Console.Write("Enter your choice:");
             int choice = Convert.ToInt32(Console.ReadLine());
             switch (choice)
@@ -27,6 +28,12 @@ namespace AlgorithmProblems
                     List<string> list = new List<string>(filepath.Split(' '));
                     list.Sort();
                     BinarySearchWord.BinarySearch(list);
+                    break;
+                case 3:
+                    InsertionSort insertionSort = new InsertionSort();
+                    string[] arr = { "My", "Name", "Is", "Girish" };
+                    insertionSort.Sort(arr);
+                    insertionSort.PrintArray(arr);
                     break;
                 default:
                     break;
