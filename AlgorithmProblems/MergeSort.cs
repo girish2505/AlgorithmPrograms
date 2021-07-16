@@ -4,16 +4,16 @@ using System.Text;
 
 namespace AlgorithmProblems
 {
-    class MergeSort
+    class MergeSort<T> where T : IComparable
     {
-        public static void Merge(int[] arr1, int l, int m, int r)
+        public static void Merge(T[] arr1, int l, int m, int r)
         {
             int n1 = m - l + 1;
             int n2 = r - m;
 
             // Create temp arrays
-            int[] left = new int[n1];
-            int[] right = new int[n2];
+            T[] left = new T[n1];
+            T[] right = new T[n2];
             int i, j;
 
             // Copy data to temp arrays
@@ -33,7 +33,7 @@ namespace AlgorithmProblems
             int k = l;
             while (i < n1 && j < n2)
             {
-                if (left[i] <= right[j])
+                if (left[i].CompareTo(right[j]) < 0 || left[i].CompareTo(right[j]) == 0)
                 {
                     arr1[k] = left[i];
                     i++;
@@ -58,7 +58,7 @@ namespace AlgorithmProblems
                 k++;
             }
         }
-        public static void Sort(int[] arr, int l, int r)
+        public static void Sort(T[] arr, int l, int r)
         {
             if (l < r)
             {
@@ -69,7 +69,7 @@ namespace AlgorithmProblems
                 Merge(arr, l, m, r);
             }
         }
-        public static void PrintArray(int[] arr)
+        public static void PrintArray(T[] arr)
         {
             int n = arr.Length;
             for (int i = 0; i < n; ++i)

@@ -32,24 +32,25 @@ namespace AlgorithmProblems
                     string filepath = File.ReadAllText(@"C:\Users\giris\source\repos\AlgorithmProblems\AlgorithmProblems\WordList.txt");
                     List<string> list = new List<string>(filepath.Split(' '));
                     list.Sort();
-                    BinarySearchWord.BinarySearch(list);
+                    BinarySearchWord<string> binarySearch = new BinarySearchWord<string>();
+                    binarySearch.BinarySearch(list);
                     break;
                 case 3:
-                    InsertionSort insertionSort = new InsertionSort();
+                    InsertionSort<string> insertionSort = new InsertionSort<string>();
                     string[] arr = { "My", "Name", "Is", "Girish" };
                     insertionSort.Sort(arr);
                     insertionSort.PrintArray(arr);
                     break;
                 case 4:
-                    BubbleSort bubbleSort = new BubbleSort();
+                    BubbleSort<int> bubbleSort = new BubbleSort<int>();
                     int[] array = { 4,9,3,1,8 };
                     bubbleSort.Sort(array);
                     bubbleSort.PrintArray(array);
                     break;
                 case 5:
                     int[] arr1 = { 4, 9, 3, 1, 8 };
-                    MergeSort.Sort(arr1, 0, arr1.Length - 1);
-                    MergeSort.PrintArray(arr1);
+                    MergeSort<int>.Sort(arr1, 0, arr1.Length - 1);
+                    MergeSort<int>.PrintArray(arr1);
                     break;
                 case 6:
                     Anagram anagram = new Anagram();

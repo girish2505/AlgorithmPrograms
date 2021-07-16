@@ -4,9 +4,9 @@ using System.Text;
 
 namespace AlgorithmProblems
 {
-    class BinarySearchWord
+    class BinarySearchWord<T> where T : IComparable
     {
-        public static void BinarySearch(List<string> list)
+        public void BinarySearch(List<string> list)
         {
             int mid, start = 0;
             int end = list.Count - 1;
